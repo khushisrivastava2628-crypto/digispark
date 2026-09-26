@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DigiServio Agency provides digital marketing, social media, web design, graphic design, influencer marketing, video editing and AI video generation services." />
+  <meta name="keywords" content="digital marketing agency, social media marketing, SEO, web design, graphic design, influencer marketing, video editing, AI video generation, DigiServio" />
+  <meta name="author" content="Khushi Srivastava, Founder of DigiServio Agency" />
+  <title>DigiServio | Digital Marketing & Creative Services</title>
+  <style>
+    :root {
+      --bg: #070812;
+      --bg-soft: #0d1020;
+      --card: #111528;
+      --pink: #ff3cac;
+      --purple: #7c3aed;
+      --blue: #2563eb;
+      --white: #f8fafc;
+      --muted: #a8b0c2;
+      --line: rgba(255,255,255,.1);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at 80% 0%, rgba(124,58,237,.2), transparent 30%), var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(92%, var(--max)); margin: auto; }
+
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(7,8,18,.86);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { min-height: 76px; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-size: 1.55rem; font-weight: 900; letter-spacing: -.5px; }
+    .logo span { color: var(--pink); }
+    .nav-links { display:flex; gap:28px; align-items:center; }
+    .nav-links a { color:#d9deea; font-size:.95rem; transition:.25s; }
+    .nav-links a:hover { color:var(--pink); }
+    .menu-btn { display:none; background:none; border:0; color:white; font-size:1.7rem; cursor:pointer; }
+
+    .hero { padding: 105px 0 90px; min-height: 82vh; display:flex; align-items:center; }
+    .hero-grid { display:grid; grid-template-columns: 1.12fr .88fr; gap:55px; align-items:center; }
+    .eyebrow {
+      display:inline-block; padding:7px 13px; border:1px solid rgba(255,60,172,.35);
+      border-radius:999px; color:#ff83ca; background:rgba(255,60,172,.08); font-size:.82rem; margin-bottom:22px;
+    }
+    h1 { font-size: clamp(3rem, 7vw, 6.2rem); line-height:.95; letter-spacing:-4px; max-width:850px; }
+    .gradient { background:linear-gradient(90deg,var(--pink),#a855f7,var(--blue)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero p { margin:26px 0 32px; max-width:650px; color:var(--muted); font-size:1.08rem; }
+    .buttons { display:flex; flex-wrap:wrap; gap:14px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:13px 21px; border-radius:12px; font-weight:800; border:1px solid var(--line); transition:.25s; }
+    .btn-primary { background:linear-gradient(135deg,var(--pink),var(--purple)); border:0; box-shadow:0 12px 35px rgba(255,60,172,.18); }
+    .btn-secondary { background:#101323; }
+    .btn:hover { transform:translateY(-2px); }
+
+    .hero-card {
+      padding:25px; border:1px solid var(--line); border-radius:28px;
+      background:linear-gradient(145deg,rgba(17,21,40,.95),rgba(11,13,27,.85));
+      box-shadow:0 25px 80px rgba(0,0,0,.3);
+    }
+    .orb { height:390px; border-radius:22px; display:grid; place-items:center; position:relative; overflow:hidden; background:
+      radial-gradient(circle at 30% 30%, rgba(255,60,172,.65), transparent 24%),
+      radial-gradient(circle at 75% 65%, rgba(37,99,235,.65), transparent 28%),
+      linear-gradient(135deg,#17132c,#080a15); }
+    .orb::before { content:""; width:230px; height:230px; border:1px solid rgba(255,255,255,.22); border-radius:50%; box-shadow:0 0 80px rgba(168,85,247,.45); }
+    .orb-text { position:absolute; text-align:center; font-weight:900; font-size:2rem; }
+    .orb-text small { display:block; color:#cbd5e1; font-size:.75rem; letter-spacing:3px; margin-top:6px; }
+
+    section { padding:95px 0; }
+    .section-head { max-width:700px; margin-bottom:45px; }
+    .section-head h2 { font-size:clamp(2rem,4vw,3.5rem); letter-spacing:-2px; }
+    .section-head p { color:var(--muted); margin-top:12px; }
+    .tag { color:#ff7bc4; text-transform:uppercase; letter-spacing:2px; font-size:.75rem; font-weight:800; margin-bottom:10px; }
+
+    .services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .service {
+      padding:28px; background:linear-gradient(145deg,var(--card),#0c0f1e); border:1px solid var(--line);
+      border-radius:20px; min-height:210px; transition:.3s;
+    }
+    .service:hover { transform:translateY(-7px); border-color:rgba(255,60,172,.35); }
+    .icon { font-size:1.8rem; margin-bottom:22px; }
+    .service h3 { margin-bottom:9px; font-size:1.2rem; }
+    .service p { color:var(--muted); font-size:.94rem; }
+
+    .about-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:45px; align-items:center; }
+    .founder {
+      min-height:390px; border-radius:26px; padding:30px; display:flex; flex-direction:column; justify-content:end;
+      background:linear-gradient(145deg,#201034,#101426); border:1px solid var(--line);
+    }
+    .founder strong { font-size:1.8rem; }
+    .founder span { color:#ff7bc4; }
+    .about-copy p { color:var(--muted); margin:15px 0; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:28px; }
+    .stat { padding:18px; border:1px solid var(--line); border-radius:15px; background:rgba(255,255,255,.03); }
+    .stat b { display:block; font-size:1.4rem; }
+
+    .process { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; }
+    .step { padding:24px; border-left:2px solid var(--pink); background:#0d1020; border-radius:0 15px 15px 0; }
+    .step b { color:#ff7bc4; font-size:.8rem; }
+    .step h3 { margin:8px 0; }
+    .step p { color:var(--muted); font-size:.9rem; }
+
+    .cta {
+      text-align:center; padding:70px 25px; border:1px solid rgba(255,60,172,.22); border-radius:28px;
+      background:radial-gradient(circle at 50% 0%,rgba(255,60,172,.18),transparent 50%),#0c0f1d;
+    }
+    .cta h2 { font-size:clamp(2.2rem,5vw,4.3rem); letter-spacing:-2px; }
+    .cta p { color:var(--muted); max-width:650px; margin:15px auto 28px; }
+
+    footer { border-top:1px solid var(--line); padding:35px 0; color:var(--muted); }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .footer-brand { color:white; font-weight:800; }
+
+    @media (max-width: 900px) {
+      .hero-grid,.about-grid { grid-template-columns:1fr; }
+      .services { grid-template-columns:repeat(2,1fr); }
+      .process { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width: 650px) {
+      .nav-links { display:none; position:absolute; top:76px; left:0; right:0; padding:18px 5%; background:#080a16; flex-direction:column; align-items:flex-start; border-bottom:1px solid var(--line); }
+      .nav-links.open { display:flex; }
+      .menu-btn { display:block; }
+      .hero { padding-top:70px; }
+      h1 { letter-spacing:-2px; }
+      .services,.process,.stats { grid-template-columns:1fr; }
+      .orb { height:300px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="#home">Digi<span>Servio</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">DIGITAL MARKETING • CREATIVE • GROWTH</span>
+          <h1>Turn your <span class="gradient">digital presence</span> into growth.</h1>
+          <p>DigiServio helps brands, creators and businesses build stronger online identities through strategy, social media, design, websites, content and AI-powered creative solutions.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#contact">Start a Project</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="orb">
+            <div class="orb-text">DIGISERVIO<small>SMART DIGITAL GROWTH</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">What we do</div>
+          <h2>Digital services built for modern brands.</h2>
+          <p>From strategy to execution, everything you need to create, grow and scale your digital presence.</p>
+        </div>
+        <div class="services">
+          <article class="service"><div class="icon">📱</div><h3>Social Media Marketing</h3><p>Content strategy, campaigns and platform-specific growth designed around your audience.</p></article>
+          <article class="service"><div class="icon">🚀</div><h3>Social Media Optimization</h3><p>Profile, content and discoverability improvements to turn attention into meaningful engagement.</p></article>
+          <article class="service"><div class="icon">🤝</div><h3>Influencer Marketing</h3><p>Creator-focused campaigns that connect brands with relevant communities and audiences.</p></article>
+          <article class="service"><div class="icon">🎬</div><h3>Video Editing</h3><p>Short-form reels, promotional videos and social content edited for attention and retention.</p></article>
+          <article class="service"><div class="icon">✨</div><h3>AI Video Generation</h3><p>AI-assisted visual storytelling for faster creative production and modern marketing campaigns.</p></article>
+          <article class="service"><div class="icon">✍️</div><h3>Content Writing</h3><p>Captions, blogs, website copy and marketing content with a clear brand voice.</p></article>
+          <article class="service"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Scroll-stopping social creatives, brand visuals, posters and marketing assets.</p></article>
+          <article class="service"><div class="icon">💻</div><h3>Web Design</h3><p>Responsive, conversion-focused websites that look premium and communicate clearly.</p></article>
+          <article class="service"><div class="icon">🎯</div><h3>Target Audience Analysis</h3><p>Audience research and insights to help your content reach the people most likely to care.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="founder">
+          <div class="tag">Founder</div>
+          <strong>Khushi Srivastava</strong>
+          <span>Founder of DigiServio Agency</span>
+        </div>
+        <div class="about-copy">
+          <div class="tag">About DigiServio</div>
+          <h2>Creative thinking. Digital strategy. Measurable growth.</h2>
+          <p>DigiServio is a digital services agency focused on helping businesses and creators present themselves professionally online and connect with the right audience.</p>
+          <p>We combine social media strategy, creative production, design, web experiences and AI-powered tools to make digital marketing more practical, consistent and impactful.</p>
+          <div class="stats">
+            <div class="stat"><b>360°</b><span>Digital support</span></div>
+            <div class="stat"><b>9+</b><span>Core services</span></div>
+            <div class="stat"><b>Global</b><span>Digital reach</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Our process</div>
+          <h2>Simple, strategic, focused.</h2>
+        </div>
+        <div class="process">
+          <div class="step"><b>01</b><h3>Discover</h3><p>Understand your brand, goals, audience and current digital presence.</p></div>
+          <div class="step"><b>02</b><h3>Strategize</h3><p>Create a practical roadmap around your business and audience.</p></div>
+          <div class="step"><b>03</b><h3>Create</h3><p>Produce content, designs, campaigns and digital experiences.</p></div>
+          <div class="step"><b>04</b><h3>Grow</h3><p>Track performance, learn from results and continuously improve.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta">
+          <div class="tag">Let's work together</div>
+          <h2>Ready to grow online?</h2>
+          <p>Tell us what you want to build, improve or promote. Let's turn your idea into a stronger digital presence.</p>
+          <div class="buttons" style="justify-content:center;">
+            <a class="btn btn-primary" href="tel:+918840531307">Call 8840531307</a>
+            <a class="btn btn-secondary" href="https://wa.me/918840531307" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a class="btn btn-secondary" href="mailto:hello@digiservio.in">Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><span class="footer-brand">DigiServio</span> — Digital Marketing & Creative Services</div>
+      <div>© <span id="year"></span> DigiServio Agency. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
